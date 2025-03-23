@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Details</title>
+    <style>
+        /* General styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            background-image: linear-gradient(to right, rgba(13, 203, 255, 0.9) 0, rgba(36, 167, 156, 0.9) 60%, rgba(11, 137, 108, 0.9) 100%);
+           
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            height: 100vh;
+            padding: 20px;
+           
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            color: whitesmoke;
+            text-align: center;
+        }
+
+        /* Doctor details styling */
+        .doctor-details {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .doctor-details img {
+            max-width: 150px;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+
+        .doctor-details-info {
+            flex-grow: 1;
+        }
+
+        .doctor-card {
+            display: flex;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .doctor-card img {
+            max-width: 150px;
+            border-radius: 8px;
+            margin-right: 15px;
+        }
+
+        .doctor-info {
+            flex-grow: 1;
+        }
+
+        .doctor-info h3 {
+            color: whitesmoke;
+        }
+
+        .doctor-info p {
+            color: whitesmoke;
+            margin: 5px 0;
+        }
+        @media only screen and (max-width: 600px) {
+            .container{
+                padding: 5px;
+            }
+            h2{
+                text-align: center;
+            }
+            .doctor-card img{
+                max-width: 130px;
+            }
+          }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Doctor Details</h1>
+
+        <script>
+            // Function to parse query parameters from URL
+            function getQueryParameters() {
+                const queryString = window.location.search;
+                const urlParams = new URLSearchParams(queryString);
+                const department = urlParams.get('department');
+                const doctorsJSON = urlParams.get('doctors');
+
+                if (!department || !doctorsJSON) {
+                    console.error('Missing required parameters.');
+                    alert('Invalid URL. Missing required parameters.');
+                    return null;
+                }
+
+                const doctors = JSON.parse(decodeURIComponent(doctorsJSON));
+                return { department, doctors };
+            }
+
+            // Function to display doctor details on the page
+            function displayDoctorDetails() {
+                const params = getQueryParameters();
+
+                if (!params) {
+                    return;
+                }
+
+                document.write(`<h2>${params.department} Doctors</h2>`);
+
+                params.doctors.forEach(doctor => {
+                    document.write(`
+                        <div class="doctor-card">
+                            <img src="${doctor.image}" alt="${doctor.name}">
+                            <div class="doctor-info">
+                                <h3>${doctor.name}</h3>
+                                <b><p>Specialization: ${doctor.specialization}</p></b>
+                                <p>Days: ${doctor.Days}</p>
+                                <p>Timing: ${doctor.timing}</p>
+                                <!-- Add more doctor details as needed -->
+                            </div>
+                        </div>
+                    `);
+                });
+            }
+
+            // Call the function to display doctor details
+            displayDoctorDetails();
+        </script>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Verification</title>
+  <!-- Add any additional styles or links to external stylesheets here -->
+  <link rel="stylesheet" href="/css/verification.css">
+  <link rel="icon" type="image/x-icon" href="./img/icon.png">
+</head>
+<body>
+  <div class="maincontainer">
+    <b><h1 id="login_heading"><SPAN>S</SPAN><SPAN>A</SPAN><SPAn>N</SPAn><SPan>J</SPan><SPan>I</SPan><SPAN>V</SPAN><SPan>I</SPan><SPAn>N</SPAn><SPAN>I</SPAN></h1></b>
+    <div class="coverall">
+    <div class="firstcontainer"></div>
+    <div class="secondcontainer_cover">
+<div class="secondcontainer">
+  <h1>Email Verification</h1>
+  <p>Please enter the OTP sent to your email address to complete the verification.</p>
+
+  <form id="verificationForm" action="/verify-otp" method="post">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="otp">OTP:</label>
+    <input type="text" id="otp" name="otp" required>
+
+    <button type="submit">Verify Email</button>
+  </form>
+</div>
+</div>
+</div>
+</div>
+  <!-- Add any additional scripts or links to external scripts here -->
+</body>
+</html>

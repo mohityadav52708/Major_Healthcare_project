@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanjivini</title>
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" type="text/css" href="/css/health_care.css">
+    <link rel="icon" type="image/x-icon" href="./img/icon.png">
+    <!-- For Google Font -->
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;1,400&family=Orbitron&family=Ubuntu&family=Varela+Round&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="float-panel.js"></script>
+</head>
+
+<body>
+    <div class="grand">
+        <div class="parent_container">
+            <nav class="navbar">
+                <ul class="nav-list">
+                    <li><a style="color:black;" href="home.html">Home</a></li>
+                    <li><a id="about" href="./AboutUs.html">About Us</a></li>
+                    <li><a id="about" href="./contact.html">Contact</a></li>
+                    <li><a id="about" href="./health_care.html">HealthHistory</a></li>
+                    <form action="" class="search">
+                        <input type="text" placeholder="Search" class="searchinput">
+                        <button type="button" class="searchbutton">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </form>
+
+                </ul>
+            </nav>
+            <div class="about">
+                    <h1>HEALTH HISTORY</h1>
+            
+                    <a href="imageuploader.html"><button>Upload Medical Recipt</button></a>
+                
+            </div>
+                <!-- <div class="chatbot_div">
+                    <a href="chatbot.html">
+                        <form action="" class="chatbot">
+                                <i class="fa-solid fa-robot">        
+                                </i>
+                            </form>
+                        </a>
+                </div> -->
+        </div>
+        <div class="secondcontainer">
+            <div class="minisecondhome">
+                <div class="left">
+                    
+        <form action="submit_action.php" method="post">
+            <label for="name">Full Name:</label>
+            <input placeholder="Your Name" type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input placeholder="Your Emal id" type="email" id="email" name="email" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="text" id="dob" name="dob" placeholder="MM/DD/YYYY" required>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="medical-history">Medical History:</label>
+            <textarea placeholder="Medical History" id="medical-history" name="medical-history" rows="4" required></textarea>
+        </form>
+                </div>
+                <div class="right">
+                    <form action="submit_action.php" method="post">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" name="age" required>
+            
+                        <label for="contact">Contact:</label>
+                        <input type="number" id="number" name="number" required placeholder="Contact Number">
+            
+                        <label for="dob">Blood Group</label>
+                        <input type="text" id="dob" name="bloodgroup" placeholder="Blood Group" required>
+            
+                        <label for="gender">Gender:</label>
+                        <select id="gender" name="gender">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+            
+                        <label for="address">Address</label>
+                        <textarea id="address" name="address" rows="4" required placeholder="Your Address"></textarea>
+            
+                    </form>
+                    <input type="submit" value="Submit">
+                </div>
+            </div>
+        </div>
+        <div class="seventhchild_container">
+            <div class="seventhmini_home">
+                <div class="about_us">
+                    <h2>About Us</h2>
+                    <p>Sanjivini is a revolutionary medical web app committed to enhancing healthcare accessibility.
+                        Our platform connects patients with top-notch healthcare professionals, making appointments
+                        easy. We prioritize your well-being, offering convenience, efficiency, and excellence in
+                        healthcare delivery. Trust Sanjivini for a healthier, happier you.</p>
+                </div>
+                <div class="Departments">
+                    <h3>Departments</h3>
+                    <b><a href="">
+                            <p>CARDIOLOGY</p>
+                        </a></b>
+                    <b><a href="">
+                            <p>OPHTHALMOLOGY</p>
+                        </a></b>
+                    <b><a href="">
+                            <p>PULMONARY</p>
+                        </a></b>
+                    <b><a href="">
+                            <p>DENTAL</p>
+                        </a></b>
+                    <b><a href="">
+                            <p>DIAGNOSTICS</p>
+                        </a></b>
+                    <b><a href="">
+                            <p>FOR DISABLED</p>
+                        </a></b>
+                    <b><a href="">
+                            <p>TRAUMOTOLIGY</p>
+                        </a></b>
+                    <b><a href="">
+                            <p>LABORATORY</p>
+                        </a></b>
+                </div>
+                <div class="contact_us">
+                    <div class="Contact_info">
+                        <h3>Contact Info</h3>
+                    </div>
+                    <div class="info_cover">
+                        <div class="emergency">
+                            <b>
+                                <p>Emergency Cases</p>
+                            </b>
+                            <p>+91 &nbsp; 123 &nbsp;456&nbsp;7890</p>
+                        </div>
+                        <div class="address">
+                            <b>
+                                <p>Address</p>
+                            </b>
+                            <p>Banglore </p>
+                        </div>
+                        <div class="phone">
+                            <b>
+                                <p>Phone</p>
+                            </b>
+                            <p>+91 123-456-7890 </p>
+                        </div>
+                        <div class="email">
+                            <b>
+                                <p>Email</p>
+                            </b>
+                            <p>contact@gmail.com </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="eightchild_container">
+            <div class="first">
+                <p>Copyright © 2023 Sanjivini Healthcare</p>
+            </div>
+            <div class="second">
+                <p>Made by <b>RGM</b></p>
+            </div>
+            <div class="third">
+                <p>Powered by Sanjivini Healthcare</p>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

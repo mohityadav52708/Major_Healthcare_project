@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanjivini</title>
+    <link rel="stylesheet" type="text/css" href="../css/home.css">
+    <link rel="icon" type="image/x-icon" href="./img/icon.png">
+    <!-- For Google Font -->
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;1,400&family=Orbitron&family=Ubuntu&family=Varela+Round&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="float-panel.js"></script>
+    <script>
+        function confirmLogout() {
+            var isConfirmed = confirm("Are you sure you want to logout?");
+            if (isConfirmed) {
+                // If the user confirms, redirect to the logout URL
+                window.location.href = "/logout";
+            }
+        }
+           async function fetchDoctorsFromJSON(department) {
+            try {
+                const response = await fetch('/doctor.json'); 
+        
+                if (!response.ok) {
+                    throw new Error(`Error fetching doctors: ${response.statusText}`);
+                }
+        
+                const doctorsData = await response.json();
+                return doctorsData[department] || [];
+            } catch (error) {
+                console.error('Error fetching doctors:', error.message);
+                return [];
+            }
+        }
+async function openDoctorDetails(department) {
+    try {
+        const doctors = await fetchDoctorsFromJSON(department);
+        if (doctors.length > 0) {
+            const doctorsJSON = encodeURIComponent(JSON.stringify(doctors));
+            window.location.href = `doctor_details.html?department=${department}&doctors=${doctorsJSON}`;
+        } else {
+            console.error(`Doctors data not available for department: ${department}`);
+        }
+    } catch (error) {
+        console.error('Error opening doctor details:', error.message);
+    }
+}
+</script>
+
+</head>
+
+<body>
+    <div class="grand">
+        <div class="parent_container">
+            <nav class="navbar">
+                <ul class="nav-list">
+                    <li><a style="color:black;" href="./home.html">Home</a></li>
+                    <li><a id="about" href="./AboutUs.html">About Us</a></li>
+                    <li><a id="about" href="./contact.html">Contact</a></li>
+                    <li><a id="about " href="./health_care.html">HealthHistory</a></li>
+
+                    <!-- <li><a id="login" href="login.html">Login</a></li>
+                <li><a id="signup" href="signup.html">Signup</a></li> -->
+                    <form action="" class="search">
+                        <input type="text" placeholder="Search" class="searchinput">
+                        <button type="button" class="searchbutton">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </form>
+                    <button id="logout" onclick="confirmLogout()">Logout</button>
+
+
+                </ul>
+            </nav>
+            <div class="firstchild_container">
+                <div class="first">
+                    <b>
+                        <h1 id="welcome">YOUR MOST WELCOME IN</h1>
+                    </b>
+                    <br>
+                    <b>
+                        <h1 id="sanjivini"><SPAN>S&nbsp;A&nbsp;N&nbsp;J&nbsp;I&nbsp;V&nbsp;I&nbsp;N&nbsp;I</SPAN></h1>
+                    </b>
+                    <!-- <img src="/img/bg.jpg" alt=""> -->
+
+                </div>
+                <div class="second">
+
+                    <div class="second_content">
+                        <p>""Sanjivini, your trusted healthcare companion, is committed to your well-being. Our platform
+                            offers a wealth of resources to empower you on your health journey. From a comprehensive
+                            directory of top-notch medical professionals to insightful articles on various health
+                            topics, we've got you covered. Take control of your health with our user-friendly health
+                            tracking tools, and find solace in our supportive online community. In times of crisis,
+                            access emergency assistance swiftly through our platform. Sanjivini is more than a website;
+                            it's your partner in health, dedicated to ensuring you live your best, healthiest life.""
+                        </p>
+                    </div>
+                    <!-- <div class="chatbot_div">
+                        <a href="chatbot.html">
+                            <form action="" class="chatbot">
+                                <i class="fa-solid fa-robot">
+
+                                </i>
+                            </form>
+                        </a>
+                    </div> -->
+                </div>
+            </div>
+            <div class="secondchild_container">
+                <!-- <div class="chatbot_div">
+                    <a href="chatbot.html">
+                        <form action="" class="chatbot_div_second">
+                            <i class="fa-solid fa-robot">
+
+                            </i>
+                        </form>
+                    </a>
+                </div> -->
+                <div class="minisecondhome">
+                    <div class="left">
+                        <h1 id="heading">About Our Clinic</h1>
+                        <p id="para">Introducing Sanjivini, your trusted companion in healthcare. Our cutting-edge
+                            medical web app revolutionizes your health journey. Access your medical records securely,
+                            schedule appointments effortlessly, and receive personalized health recommendations tailored
+                            just for you. Stay informed with real-time updates on health trends and breakthroughs. With
+                            Sanjivini, your well-being is in your hands. Join us in shaping a healthier tomorrow.
+                            Download now and embark on a journey towards a happier, healthier life. Your health, your
+                            way, with Sanjivini.
+                        </p>
+                        <div class="button">
+                            <div class="cover_of_button">
+                                <a href="about.html"><button type="button" id="button">Read More ></button></a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="top">
+                            <div class="top_content">
+                                <h1 id="heading">Emergency Cases</h1>
+                                <h2 id="phonenumber"> <i id="phoneicon" aria-hidden="true" class="fas fa-phone"></i>1
+                                    910-626-85255</h2>
+                            </div>
+                            <center>
+                                <hr class="hr" id="horizontal" style="width: 80%;margin-top: 20px;opacity: .5;">
+                            </center>
+                            <div class="bottom_content">
+                                <p id="para">We provide 24/7 professional emergency help lorem ipsum dolor sit amet.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <div class="bottom_top">
+                                <h1 id="opening_hours">Opening Hours</h1>
+                                <div class="bottom_top_Weekdays">
+                                    <p id="weekdays">Weekdays</p>
+                                    <p id="timing">8.00 – 20.00</p>
+                                </div>
+                            </div>
+                            <center>
+                                <hr class="hr" id="horizontal"
+                                    style="width: 80%;margin-top: 20px;color: rgb(41, 141, 141);opacity: .5;">
+                            </center>
+                            <div class="bottom_middle">
+                                <div class="bottom_top_Weekdays">
+                                    <p id="weekdays">Saturday</p>
+                                    <p id="timing">9.30 – 17.30</p>
+                                </div>
+                            </div>
+                            <center>
+                                <hr class="hr" id="horizontal" style="width: 80%;margin-top: 20px;opacity: .5;">
+                            </center>
+                            <div class="bottom_bottom">
+                                <div class="bottom_top_Weekdays">
+                                    <p id="weekdays">Sunday</p>
+                                    <p id="timing">9.30 – 15.00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="thirdchild_container">
+                <div class="thirdminihome">
+                    <div class="thirdhome_content">
+                        <div class="thirdhome_top">
+                            <h3>MODERN EQUIPMENT</h3>
+                            <h1>Departments</h1>
+                        </div>
+                        <div class="thirdhome_bottom">
+                            <div class="thirdhome_boxes">
+                                <div class="project-card" onclick="openDoctorDetails('Cardiology')">
+                                    <div class="firstbox" class="project-front">
+                                        <img src="/img/heart.png" alt="">
+                                        <h3>CARDIOLOGY</h3>
+                                    </div>
+                                    <div class="project-back"  >
+                                        <h3 id="disease_heading">CARDIOLOGY</h3>
+                                        <p id="disease_para">Cardiology diseases, such as coronary artery disease and heart failure, impact the heart's function. Lifestyle choices and genetics play roles. Early detection and lifestyle adjustments are vital for effective management.</p>
+                                    </div>
+                                </div>
+                                <div class="project-card" onclick="openDoctorDetails('Ophthalmology')">
+                                    <div class="firstbox" class="project-front">
+                                        <img src="/img/eye.png" alt="">
+                                        <h3>OPHTHALMOLOGY</h3>
+                                    </div>
+                                    <div   class="project-back">
+                                        <h3 id="disease_heading">OPHTHALMOLOGY</h3>
+                                        <p id="disease_para">Ophthalmology focuses on eye health and vision. From routine eye exams to complex surgeries, it addresses conditions like cataracts and glaucoma. Regular check-ups contribute to overall eye well-being.</p>
+                                    </div>
+                                </div>
+                                <div class="project-card" onclick="openDoctorDetails('Pulmonary')">
+                                    <div class="firstbox" class="project-front">
+                                        <img src="/img/kidney.png" alt="">
+                                        <h3>PULMONARY</h3>
+                                    </div>
+                                    <div  class="project-back">
+                                        <h3 id="disease_heading">PULMONARY</h3>
+                                        <p id="disease_para">Pulmonary medicine specializes in respiratory health, managing conditions like asthma and chronic obstructive pulmonary disease (COPD). Expertise includes diagnostic tests and treatments to enhance lung function and overall respiratory wellness.</p>
+                                    </div>
+                                </div>
+                                <div class="project-card" onclick="openDoctorDetails('Dental')">
+                                    <div class="firstbox" class="project-front">
+                                        <img src="/img/teeth.png" alt="">
+                                        <h3>DENTAL</h3>
+                                    </div>
+                                    <div  class="project-back">
+                                        <h3 id="disease_heading">DENTAL</h3>
+                                        <p id="disease_para">Dentistry focuses on oral health, addressing issues like cavities, gum diseases, and oral hygiene. Dental professionals provide preventive care, treatments, and cosmetic procedures, ensuring optimal dental well-being and a confident smile.</p>
+                                    </div>
+                                </div>
+                                <div class="project-card" onclick="openDoctorDetails('Diagnostics')">
+                                    <div class="firstbox" class="project-front">
+                                        <img src="/img/diagonastic.png" alt="">
+                                        <h3>DIAGNOSTICS</h3>
+                                    </div>
+                                    <div  class="project-back">
+                                        <h3 id="disease_heading">DIAGNOSTICS</h3>
+                                        <p id="disease_para">Diagnostics play a crucial role in healthcare, involving tests and procedures to identify diseases. Accurate diagnostics guide medical decisions, enabling timely treatment and improving patient outcomes by ensuring precision in healthcare interventions.</p> 
+                                    </div>
+                                </div>
+                                <div class="project-card" onclick="openDoctorDetails('Disabled')">
+                                    <div class="firstbox" class="project-front">
+                                        <img src="/img/for disabled.png" alt="">
+                                        <h3>DISABLED</h3>
+                                    </div>
+                                    <div   class="project-back">
+                                        <h3 id="disease_heading">DISABLED</h3>
+                                        <p id="disease_para">Dedicated healthcare for individuals with disabilities focuses on providing tailored support and accessibility. Comprehensive care aims to enhance their well-being, addressing unique challenges and fostering inclusivity in the medical community.</p> 
+                                    </div>
+                                </div>
+                                
+                                <div class="project-card" onclick="openDoctorDetails('Traumotoligy')">
+                                    <div class="firstbox" class="project-front">
+                                        <img src="/img/traumotoligy.png" alt="">
+                                        <h3>TRAUMOTOLIGY</h3>
+                                    </div>
+                                    <div     class="project-back">
+                                        <h3 id="disease_heading">TRAUMOTOLIGY</h3>
+                                        <p id="disease_para">Traumatology specializes in treating injuries and trauma-related conditions. It encompasses surgical and non-surgical interventions, rehabilitation, and emotional support to aid recovery, ensuring optimal outcomes for patients affected by trauma.</p> 
+                                    </div>
+                                </div>
+                                
+                                <div class="project-card" onclick="openDoctorDetails('Laboratory')">
+                                    <div class="firstbox" class="project-front">
+                                        <img src="/img/laboratory.png" alt="">
+                                        <h3>LABORATORY</h3>
+                                    </div>
+                                    <div class="project-back">
+                                        <h3 id="disease_heading">LABORATORY</h3>
+                                        <p id="disease_para">Laboratory services play a vital role in healthcare, providing accurate diagnostic tests and analyses. From blood work to advanced screenings, laboratories contribute essential data for medical professionals to make informed decisions about patient care.</p> 
+                                    </div>
+                                </div>
+                                
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="fourthchild_container">
+                <div class="fourthmini_home">
+                    <div class="left">
+                        <div class="fourth_left_minihome">
+                            <center><i aria-hidden="true" class="fas fa-quote-right"></i></center>
+                            <center>
+                                <h2>THIS IS THE BEST MEDICAL CENTRE...</h2>
+                            </center>
+                            <h1>I’ve Been Coming Here for about 2 Years and It Is Simply the Best...</h1>
+                            <p>Randy Burns</p>
+                            <center><a href="#"><button type="button" id="button">MORE TESTIMONIALS ></button></a>
+                            </center>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <img src="/img/fourth_child image.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="fifthchild_container">
+                <div class="fifthmini_home">
+                    <div class="fifthchild_content">
+                        <div class="top">
+                            <h3>CERTIFIED PERSONAL</h3>
+                            <h1>Our Doctors</h1>
+                        </div>
+
+                        <div class="bottom">
+                            <div class="boxes">
+                                <div class="box">
+                                    <div class="top_of_box">
+                                        <img src="/img/doctor1.jpg" alt="">
+                                    </div>
+                                    <div class="bottom_of_box">
+                                        <h2>DR. VICTOR PATEL</h2>
+                                        <hr width="30%" style="color: rgb(16, 117, 126);height: 2px;">
+                                        <b>
+                                            <p>Cardiology</p>
+                                        </b>
+                                        <b>
+                                            <p>+1 910-626-85266</p>
+                                        </b>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="top_of_box">
+                                        <img src="/img/doctor2.png" alt="">
+                                    </div>
+                                    <div class="bottom_of_box">
+                                        <h2>DR. LUCY KELLER</h2>
+                                        <hr width="30%" style="color: rgb(16, 117, 126);height: 2px;">
+                                        <b>
+                                            <p> Ophthalmology</p>
+                                        </b>
+                                        <b>
+                                            <p>+1 910-626-85299</p>
+                                        </b>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="top_of_box">
+                                        <img src="/img/doctor3.jpg" alt="">
+                                    </div>
+                                    <div class="bottom_of_box">
+                                        <h2>DR. BELLA JAMES</h2>
+                                        <hr width="30%" style="color: rgb(16, 117, 126);height: 2px;">
+                                        <b>
+                                            <p>Pulmonary</p>
+                                        </b>
+                                        <b>
+                                            <p>+1 910-626-85277</p>
+                                        </b>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="top_of_box">
+                                        <img src="/img/doctor4.jpg" alt="">
+                                    </div>
+                                    <div class="bottom_of_box">
+                                        <h2>DR. OLIVIA RAMOS</h2>
+                                        <hr width="30%" style="color: rgb(16, 117, 126);height: 2px;">
+                                        <b>
+                                            <p>Dental</p>
+                                        </b>
+                                        <b>
+                                            <p>+1 910-626-85288</p>
+                                        </b>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sixthchild_container">
+                <div class="sixthmini_home">
+                    <b>
+                        <p>PERFECT MEDICAL SERVICES</p>
+                    </b>
+                    <h1>Book an Appointment</h1>
+                    <p id="para">
+                        Sanjivini, the healthcare web app, simplifies appointment booking. Users can easily select
+                        healthcare professionals, preferred locations, and convenient time slots. This user-friendly
+                        platform offers real-time availability updates, enhancing efficiency and patient-centered care.
+                        Sanjivini ensures a hassle-free experience, prioritizing your health and well-being.</p>
+                    <a href="/book-appointment.html"><button>Book an Appointment &nbsp;></button></a>
+                </div>
+            </div>
+            <div class="seventhchild_container">
+                <div class="seventhmini_home">
+                    <div class="about_us">
+                        <h2>About Us</h2>
+                        <p>Sanjivini is a revolutionary medical web app committed to enhancing healthcare accessibility.
+                            Our platform connects patients with top-notch healthcare professionals, making appointments
+                            easy. We prioritize your well-being, offering convenience, efficiency, and excellence in
+                            healthcare delivery. Trust Sanjivini for a healthier, happier you.</p>
+                    </div>
+                    <div class="Departments">
+                        <h3>Departments</h3>
+                        <b><a href="">
+                                <p>CARDIOLOGY</p>
+                            </a></b>
+                        <b><a href="">
+                                <p>OPHTHALMOLOGY</p>
+                            </a></b>
+                        <b><a href="">
+                                <p>PULMONARY</p>
+                            </a></b>
+                        <b><a href="">
+                                <p>DENTAL</p>
+                            </a></b>
+                        <b><a href="">
+                                <p>DIAGNOSTICS</p>
+                            </a></b>
+                        <b><a href="">
+                                <p>FOR DISABLED</p>
+                            </a></b>
+                        <b><a href="">
+                                <p>TRAUMOTOLIGY</p>
+                            </a></b>
+                        <b><a href="">
+                                <p>LABORATORY</p>
+                            </a></b>
+                    </div>
+                    <div class="contact_us">
+                        <div class="Contact_info">
+                            <h3>Contact Info</h3>
+                        </div>
+                        <div class="info_cover">
+                            <div class="emergency">
+                                <b>
+                                    <p>Emergency Cases</p>
+                                </b>
+                                <p>+91 &nbsp; 123 &nbsp;456&nbsp;7890</p>
+                            </div>
+                            <div class="address">
+                                <b>
+                                    <p>Address</p>
+                                </b>
+                                <p>Banglore </p>
+                            </div>
+                            <div class="phone">
+                                <b>
+                                    <p>Phone</p>
+                                </b>
+                                <p>+91 123-456-7890 </p>
+                            </div>
+                            <div class="email">
+                                <b>
+                                    <p>Email</p>
+                                </b>
+                                <p>contact@gmail.com </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="eightchild_container">
+                <div class="first">
+                    <p>Copyright © 2023 Sanjivini Healthcare</p>
+                </div>
+                <div class="second">
+                    <p>Made by <b>RGM</b></p>
+                </div>
+                <div class="third">
+                    <p>Powered by Sanjivini Healthcare</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script
+          src="https://www.chatbase.co/embed.min.js"
+          chatbotId="GE3b91zdUr8W6vBP73fH3"
+          domain="www.chatbase.co"
+          defer>
+</script>
+</body>
+
+</html>

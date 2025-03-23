@@ -1,0 +1,541 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    /* background-image: linear-gradient(to right, #01141D  , #0d2f3f );  */
+}
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;1,400&family=Orbitron&family=Ubuntu&family=Varela+Round&display=swap');
+
+body{
+    /* background: url(https://imageio.forbes.com/specials-images/imageserve/62bc54b6d9785913bcd547b5/Close-up-of-doctor-using-a-digital-tablet/960x0.jpg?height=473&width=711&fit=bounds) ;  */
+    background-image: url(https://images.unsplash.com/photo-1551190822-a9333d879b1f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8c3VyZ2VyeXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80);
+    width: 100%;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-image: fixed;
+    object-fit:cover;
+    background-attachment: fixed;
+
+    /* opacity: .7; */
+}
+.grand{
+    width: 100%;
+    height: 235vh;
+}
+.parent_container{
+    opacity: 1;
+    background-color: transparent;
+    height: 30vw;
+    width: 100%; 
+    background-color: transparent;
+    background-image: linear-gradient(to right, rgba(17, 255, 255, 0.4) 0, rgba(5, 192, 255, 0.8) 60%, rgba(19, 247, 255, 0.8) 100%);
+    /* background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0.6) 60%, rgba(0, 0, 0, 0.8) 100%); */
+    transition: 3s linear;
+    width: 100%;
+}
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Navbar styles */
+.navbar {
+    width: 100%;
+    justify-content: center;
+    background-color: transparent;
+    height: 100px;
+    display: flex;
+    animation: slidesecond 2s ease-in;
+    animation: slide 2s ease-in;
+}
+.nav-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    /* animation: slidesecond 2s ; */
+}
+.nav-list li{
+    margin: 30px 30px;
+}
+.nav-list li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+.nav-list li a:hover {
+    color: rgb(16, 58, 93); /* Change color on hover */
+    transition: 0.3s ease-in;
+}
+.search{
+    display: inline-flex;
+    align-items: center;
+    background-color: #009faa;
+    color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #fff;
+}
+
+.search :is(input,button){
+    background:transparent;
+    color: inherit;
+    border: none;
+    outline: none;
+}
+.searchinput{
+    width: 0;
+    transition: width 0.5s;
+}
+.searchbutton{
+    display: grid;
+    place-items: center;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    transition: color 0.25s;
+}
+.searchbutton:hover{
+    color: #e3e3e3;
+}
+.search:focus-within input{
+    width: 200px;
+}
+::placeholder{
+    font: inherit;
+    color: #e3e3e3;
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(50%);
+    } 
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    } 
+}
+
+.about{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:25vw;
+    font-size: 40px;
+    color: whitesmoke;
+}
+
+.secondcontainer{
+    width: 100%;
+    height: 60vw;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.secondcontainer .minisecondhome{
+    width: 80%;
+    height: 60vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.secondcontainer .minisecondhome .left{
+    width: 50%;
+    height: 35vw;
+    margin: 20px 20px;
+    border-radius: 16px;
+    
+}
+.secondcontainer .minisecondhome .right{
+    width: 50%;
+    height: 30vw;
+    border-radius: 16px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center right;
+    background-image: url(../img/thirdhome_bg_image.jpg);  
+}
+.secondcontainer .minisecondhome .left .top{
+    width: 100%;
+    height: 13vw;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px;
+}
+.secondcontainer .minisecondhome .left .top h3{
+    margin-bottom: 30px;
+
+    color: #009faa;
+    font-size: 25px;
+    text-align: center;
+
+}
+.secondcontainer .minisecondhome .left .top h1{
+    color: #41b5bd;
+    font-size: 60px;
+    margin-bottom: 0px;
+}
+
+.secondcontainer .minisecondhome .left .top p{
+    color: #41b5bd;
+    /* margin-bottom: 20px; */
+    line-height: 1.6;
+    margin-top: 20px;
+}
+.secondcontainer .minisecondhome .right .rightcover{
+    border-radius: 16px;
+    width: 100%;
+    height: 30vw;
+    background-image: linear-gradient(to right, rgba(132, 245, 198, 0.8) 0, rgba(10, 199, 205, 0.8) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+.secondcontainer .minisecondhome .right .rightcover h2{
+    text-align: center;   
+    color: white;
+    margin: 40px; 
+    font-size: 30px;
+}
+.secondcontainer .minisecondhome .right .rightcover h1{
+    text-align: center;   
+    color: white;
+    margin: 30px; 
+    font-size: 50px;
+}
+.secondcontainer .minisecondhome .right .rightcover p{
+    text-align: right;   
+    color: white;
+    margin-right: 30px; 
+    font-size: 50px;
+    font-family:cursive;
+}
+
+.seventhchild_container{
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0192bc;
+}
+.seventhchild_container .seventhmini_home{
+    width: 80%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.seventhchild_container .seventhmini_home .about_us{
+    width: 40%;
+    height: 40vh;
+    text-align: center;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-content: center;
+    
+    margin: 30px 30px;
+}
+.seventhchild_container .seventhmini_home .about_us h2{
+    font-size: 30px;
+    color: whitesmoke;
+    margin-bottom: 30px;
+    text-align: left;
+}
+.seventhchild_container .seventhmini_home .about_us p{
+    font-size: 20px;
+    color: whitesmoke;
+    line-height: 1.8;
+    text-align: left;
+}
+.seventhchild_container .seventhmini_home .Departments{
+    width: 30%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    
+    margin: 30px 30px;
+}
+.seventhchild_container .seventhmini_home .Departments  h3{
+    margin-bottom: 30px;
+    font-size: 30px;
+    color: whitesmoke;
+    text-align: left;
+}
+
+.seventhchild_container .seventhmini_home .Departments a{
+    text-decoration: none;
+    font-size: 13px;
+    color: whitesmoke;
+    line-height: 2.5;
+}
+.seventhchild_container .seventhmini_home .contact_us{
+    width: 30%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    
+    margin: 30px 30px;
+}
+.seventhchild_container .seventhmini_home .contact_us .Contact_info{
+    width: 100%;
+    height: 20%;
+}
+.seventhchild_container .seventhmini_home .contact_us .Contact_info h3{
+    font-size: 30px;
+    color: whitesmoke;
+}
+.seventhchild_container .seventhmini_home .contact_us .emergency{
+    width: 100%;
+    height: 20%;
+    color: whitesmoke;
+    margin-top: 30px;
+}
+.seventhchild_container .seventhmini_home .contact_us .emergency p{
+    margin-bottom: 10px;
+}
+.seventhchild_container .seventhmini_home .contact_us .address{
+    width: 100%;
+    height: 20%;
+    color: whitesmoke;
+    margin-top: 10px;
+}
+.seventhchild_container .seventhmini_home .contact_us .address p{
+    margin-bottom: 10px;
+}
+.seventhchild_container .seventhmini_home .contact_us .phone{
+    width: 100%;
+    height: 20%;
+    color: whitesmoke;
+    margin-top: 10px;
+}
+.seventhchild_container .seventhmini_home .contact_us .phone p{
+    margin-bottom: 10px;
+}
+.seventhchild_container .seventhmini_home .contact_us .email{
+    width: 100%;
+    height: 20%;
+    color: whitesmoke;
+    margin-top: 10px;
+}
+.seventhchild_container .seventhmini_home .contact_us .email p{
+    margin-bottom: 10px;
+}
+
+.seventhchild_container .seventhmini_home .contact_us .Contact_info{
+    width: 100%;
+    height: 20%;
+}
+.eightchild_container{
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    background-color: whitesmoke;
+    color: grey;
+}
+.eightchild_container .first{
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.eightchild_container .second{
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.eightchild_container .third{
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width: 600px) {
+    .parent_container{
+        height: 95vw;
+    }
+    .about {
+        width: 100%;
+        height: 74vw;
+        font-size: 27px;
+    }
+    .nav-list li a {
+     font-size: 10px;
+     justify-content:space-evenly ;
+    }
+    .nav-list{
+     justify-content: space-evenly;
+    }
+    .nav-list li {
+     margin: 30px 20px;
+ }
+ .seventhchild_container .seventhmini_home {
+    flex-direction: column;
+    width: 90%;
+}
+.seventhchild_container {
+    width: 100%;
+    height: 130vh;
+}
+.seventhchild_container .seventhmini_home .about_us {
+    width: 100%;
+    height: 40vh;
+    margin: 0px 0px;
+}
+.seventhchild_container .seventhmini_home .about_us h2 {
+    text-align: center;
+}
+.seventhchild_container .seventhmini_home .about_us p{
+    text-align: center;
+}
+.seventhchild_container .seventhmini_home .Departments {
+    width: 90%;
+    margin: 57px 0px;
+}
+.seventhchild_container .seventhmini_home .Departments h3 {
+    text-align: center;
+}
+.seventhchild_container .seventhmini_home .Departments p {
+    text-align: center;
+}
+.seventhchild_container .seventhmini_home .Departments a {
+    font-size: 16px;
+}
+.seventhchild_container .seventhmini_home .contact_us {
+    width: 100%;
+    margin: 0px 0px;
+}
+.seventhchild_container .seventhmini_home .contact_us .Contact_info h3 {
+    text-align: center;
+}
+.seventhchild_container .seventhmini_home .contact_us .Contact_info p {
+    text-align: center;
+}
+.seventhchild_container .seventhmini_home .contact_us .emergency p {
+    text-align: left;
+}
+.seventhchild_container .seventhmini_home .contact_us .address p {
+    text-align: left;
+}
+.seventhchild_container .seventhmini_home .contact_us .phone p {
+    text-align: left;
+}
+.seventhchild_container .seventhmini_home .contact_us .email p {
+    text-align: left;
+}
+.info_cover{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.seventhchild_container .seventhmini_home .contact_us .emergency {
+    display: flex;
+justify-content: center;
+flex-direction: column;
+    align-items: center;
+width: 50%;
+}
+.seventhchild_container .seventhmini_home .contact_us .address {display: flex;
+    justify-content: center;
+    flex-direction: column;
+        align-items: center;
+    width: 50%;
+    margin-top: 30px;
+}
+.seventhchild_container .seventhmini_home .contact_us .email {display: flex;
+    justify-content: center;
+    flex-direction: column;
+        align-items: center;
+    width: 50%;
+    margin: 50px 0px;
+}
+.seventhchild_container .seventhmini_home .contact_us .phone {display: flex;
+    justify-content: center;
+    flex-direction: column;
+        align-items: center;
+    width: 50%;
+    margin: 50px 0px ;
+}
+.eightchild_container {
+    flex-direction: column;
+}
+.secondcontainer {
+    width: 100%;
+    height: 300vw;
+}
+.secondcontainer .minisecondhome {
+    width: 100%;
+    height: 360vw;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.secondcontainer .minisecondhome .left{
+    width: 100%;
+    height: 180vw;
+    margin-top: -35px;
+}
+.secondcontainer .minisecondhome .left .top {
+    width: 100%;
+    height: 185vw;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 31px;
+    line-height: 1.2;
+}
+.secondcontainer .minisecondhome .left .top p {
+    line-height: 1.6;
+    text-align: center;
+    font-size: 17px;
+}
+.secondcontainer .minisecondhome .right .rightcover {
+    width: 100%;
+    height: 126vw;
+    margin-top: -145px;
+}
+.secondcontainer .minisecondhome .left .top h3{
+    font-size: 20px;
+}
+.secondcontainer .minisecondhome .left .top h1{
+    font-size: 34px;
+    text-align: center;
+}
+.secondcontainer .minisecondhome .right{
+    width: 100%;
+    height: 90vw;
+}
+ }
+ 
+ 
+ 
+ @media screen and (max-width: 400px){
+  
+ .seventhchild_container .seventhmini_home .about_us {
+    width: 100%;
+    height: 100vh;
+}
+.seventhchild_container .seventhmini_home .Departments {
+  display: none;
+}
+.seventhchild_container .seventhmini_home .contact_us {
+    width: 100%;
+    margin-top: 70px;
+}
+.seventhchild_container {
+    width: 100%;
+    height: 120vh;
+}
+ }
