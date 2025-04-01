@@ -1,0 +1,186 @@
+{
+  "Cardiology": [
+    {
+      "name": "Dr. John Doe",
+      "specialization": "Cardiology",
+      "timing": "8.00 AM - 4.00 PM",
+      "image": "../img/doctor1.jpg",
+      "Days": "Monday - Friday"
+    },
+    {
+      "name": "Dr. John Doe",
+      "specialization": "Cardiology",
+      "timing": "8.00 AM - 4.00 PM",
+      "image": "../img/doctor2.png",
+      "Days": "Monday - Friday"
+    },
+    {
+      "name": "Dr. Jane Smith",
+      "specialization": "Cardiology",
+      "timing": "9.00 AM - 5.00 PM",
+      "image": "../img/doctor3.jpg",
+      "Days": "Monday - Friday"
+    }
+  ],
+  "Ophthalmology": [
+    {
+      "name": "Dr. Jane Smith",
+      "specialization": "Ophthalmology",
+      "timing": "9.00 AM - 5.00 PM",
+      "image": "../img/doctor2.png",
+      "Days": "Monday - Friday"
+    },
+    {
+      "name": "Dr. John Doe",
+      "specialization": "Ophthalmology",
+      "timing": "8.00 AM - 4.00 PM",
+      "image": "../img/doctor1.jpg",
+      "Days": "Monday - Friday"
+    },
+    {
+      "name": "Dr. Jane Smith",
+      "specialization": "Ophthalmology",
+      "timing": "9.00 AM - 5.00 PM",
+      "image": "../img/doctor4.jpg",
+      "Days": "Monday - Friday"
+    }
+  ],
+  "Pulmonary": [
+    {
+      "name": "Dr. Jane Smith",
+      "specialization": "PULMONARY",
+      "timing": "9.00 AM - 5.00 PM",
+      "image": "../img/doctor2.png",
+      "Days": "Monday - Friday"
+    },
+    {
+      "name": "Dr. John Doe",
+      "specialization": "PULMONARY",
+      "timing": "8.00 AM - 4.00 PM",
+      "image": "../img/doctor1.jpg",
+      "Days": "Monday - Friday"
+    },
+    {
+      "name": "Dr. Jane Smith",
+      "specialization": "PULMONARY",
+      "timing": "9.00 AM - 5.00 PM",
+      "image": "../img/doctor4.jpg",
+      "Days": "Monday - Friday"
+    }
+  ],
+  "Dental": [
+    {
+      "name": "Dr. Jane Smith",
+      "specialization": "DENTAL",
+      "timing": "9.00 AM - 5.00 PM",
+      "image": "../img/doctor2.png",
+      "Days": "Monday - Friday"
+    },
+    {
+      "name": "Dr. John Doe",
+      "specialization": "DENTAL",
+      "timing": "8.00 AM - 4.00 PM",
+      "image": "../img/doctor1.jpg",
+      "Days": "Monday - Friday"
+    },
+    {
+      "name": "Dr. Jane Smith",
+      "specialization": "DENTAL",
+      "timing": "9.00 AM - 5.00 PM",
+      "image": "../img/doctor4.jpg",
+      "Days": "Monday - Friday"
+    }
+  ],
+  "Diagnostics": [
+    {
+      "name": "Dr. Jane Smith",
+      "specialization": "DIAGNOSTICS",
+      "timing": "9.00 AM - 5.00 PM",
+      "image": "../img/doctor2.png",
+      "Days": "Monday - Friday"
+    },
+    {
+      "name": "Dr. John Doe",
+      "specialization": "DIAGNOSTICS",
+      "timing": "8.00 AM - 4.00 PM",
+      "image": "../img/doctor1.jpg",
+      "Days": "Monday - Friday"
+    },
+    {
+      "name": "Dr. Jane Smith",
+      "specialization": "DIAGNOSTICS",
+      "timing": "9.00 AM - 5.00 PM",
+      "image": "../img/doctor4.jpg",
+      "Days": "Monday - Friday"
+    }
+  ],
+  "Disabled": [
+    {
+      "name": "Dr. Jane Smith",
+      "specialization": "DISABLED",
+      "timing": "9.00 AM - 5.00 PM",
+      "image": "../img/doctor2.png",
+      "Days": "Monday - Friday"
+    },
+    {
+      "name": "Dr. John Doe",
+      "specialization": "DISABLED",
+      "timing": "8.00 AM - 4.00 PM",
+      "image": "../img/doctor1.jpg",
+      "Days": "Monday - Friday"
+    },
+    {
+      "name": "Dr. Jane Smith",
+      "specialization": "DISABLED",
+      "timing": "9.00 AM - 5.00 PM",
+      "image": "../img/doctor4.jpg",
+      "Days": "Monday - Friday"
+    }
+  ],
+  "Traumotoligy": [
+    {
+      "name": "Dr. Jane Smith",
+      "specialization": "TRAUMOTOLIGY",
+      "timing": "9.00 AM - 5.00 PM",
+      "image": "../img/doctor2.png",
+      "Days": "Monday - Friday"
+    },
+    {
+      "name": "Dr. John Doe",
+      "specialization": "TRAUMOTOLIGY",
+      "timing": "8.00 AM - 4.00 PM",
+      "image": "../img/doctor1.jpg",
+      "Days": "Monday - Friday"
+    },
+    {
+      "name": "Dr. Jane Smith",
+      "specialization": "TRAUMOTOLIGY",
+      "timing": "9.00 AM - 5.00 PM",
+      "image": "../img/doctor4.jpg",
+      "Days": "Monday - Friday"
+    }
+  ],
+  "Laboratory": [
+    {
+      "name": "Dr. Jane Smith",
+      "specialization": "LABORATORY",
+      "timing": "9.00 AM - 5.00 PM",
+      "image": "../img/doctor2.png",
+      "Days": "Monday - Friday"
+    },
+    {
+      "name": "Dr. John Doe",
+      "specialization": "LABORATORY",
+      "timing": "8.00 AM - 4.00 PM",
+      "image": "../img/doctor1.jpg",
+      "Days": "Monday - Friday"
+    },
+    {
+      "name": "Dr. Jane Smith",
+      "specialization": "LABORATORY",
+      "timing": "9.00 AM - 5.00 PM",
+      "image": "../img/doctor4.jpg",
+      "Days": "Monday - Friday"
+    }
+  ]
+}
